@@ -1,0 +1,26 @@
+{
+    "lojas":[
+        {
+            "id": 1,
+            "nome": "Loja1",
+            "distancia": 200,
+            "dataCriacao": "02/04/2023",
+            "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vOoupkBlVUgMcg2NZrvKnDrtN91nnXsNcw&usqp=CAU"
+        },
+        {
+            "id": 2,
+            "nome": "Loja3",
+            "distancia": 300,
+            "dataCriacao": "02/03/2023",
+            "urlImg": "https://logosmarcas.net/wp-content/uploads/2022/02/CA-Logo-1984-1998.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Loja3",
+            "distancia": 400,
+            "dataCriacao": "02/02/2023",
+            "urlImg": "https://logospng.org/download/lojas-americanas/logo-lojas-americanas-2048.png"
+        }
+
+    ]
+}

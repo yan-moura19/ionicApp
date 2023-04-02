@@ -15,8 +15,47 @@
 
   <div id="container">
     <ul>
-      <li>Quantidade de lojas: {{lojas.length}}</li>
-      <li *ngFor="let loja of lojas">{{loja}}</li>
+      
+        
+        <ion-card *ngFor="let loja of lojas;">
+          <ion-card-header>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="${loja.urlImg}" />
+            </ion-thumbnail>
+            <ion-card-title>{{loja.nome}} </ion-card-title>
+            <ion-card-subtitle>Criada: {{loja.dataCriacao}}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+           <strong>Distancia: </strong> {{loja.distancia}}
+          </ion-card-content>
+        
+          <ion-button fill="clear" (click)="onClickEditar(loja.id, loja)">Editar</ion-button>
+          <ion-button fill="clear" (click)="onClickDelete(loja.id)">Deletar</ion-button>
+        </ion-card>
+      
     </ul>
+    <ul>
+      <form #myForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" name="nome" [(ngModel)]="nome"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Distância</ion-label>
+          <ion-input type="number" name="distancia" [(ngModel)]="distancia"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Data de criação</ion-label>
+          <ion-input type="date" name="dataCriacao" [(ngModel)]="dataCriacao"></ion-input>
+        </ion-item>
+      
+        <ion-button type="submit" (click)="onClickSalvar(nome, distancia, dataCriacao)">Salvar</ion-button>
+      </form>
+    </ul>
+    
+    
   </div>
 </ion-content>
